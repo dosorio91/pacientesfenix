@@ -1,21 +1,20 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'standalone',
+  output: 'export',
   basePath: '/pacientesfenix',
   images: {
     unoptimized: true
   },
   trailingSlash: true,
   typescript: {
-    // !! WARN !!
-    // Solo en desarrollo, esto hace el build más rápido
     ignoreBuildErrors: true,
   },
   eslint: {
-    // Solo en desarrollo, esto hace el build más rápido
     ignoreDuringBuilds: true,
-  }
+  },
+  // Forzar la generación estática
+  generateStaticParams: true
 };
 
 export default nextConfig;
