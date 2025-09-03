@@ -1,5 +1,11 @@
 "use client"
 
+// Esta función le dice a Next.js qué IDs pre-renderizar
+export function generateStaticParams() {
+  // Como usamos localStorage, generaremos una página estática de ejemplo
+  return [{ id: "example" }]
+}
+
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
