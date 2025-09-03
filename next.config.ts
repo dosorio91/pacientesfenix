@@ -5,7 +5,8 @@ const nextConfig: NextConfig = {
   basePath: '/pacientesfenix',
   images: {
     unoptimized: true
-  }
+  },
+  trailingSlash: true
 };
 
 export default nextConfig;
